@@ -2,6 +2,8 @@ import './App.css';
 import React, {useState} from "react";
 import signosJson from './signos.json';
 
+
+
 function SignoCorrespondiente (props){
   return (
     <div>
@@ -32,7 +34,37 @@ function App() {
   const [nombre, setNombre] = useState();
   const [edad, setEdad] = useState();
   const [genero, setGenero] = useState();
-  const [fechaDeNacimiento, setFechaDeNacimiento] = useState();
+  const [dia, setDia] = useState();
+  const [mes, setMes] = useState();
+  const [año, setAño] = useState();
+  const [signo, setSigno] = useState();
+
+  const calcularSigno = function (){
+    if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
+      setSigno ("Aries");
+    if ((dia >= 21 && mes == 4) || (dia <= 21 && mes == 5))
+      setSigno ("Tauro");
+    if ((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6))
+      setSigno ("Geminis");
+    if ((dia >= 22 && mes == 6) || (dia <= 22 && mes == 7))
+      setSigno ("Cancer");
+    if ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8))
+      setSigno ("Leo");
+    if ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9))
+      setSigno ("Virgo");
+    if ((dia >= 23 && mes == 9) || (dia <= 23 && mes == 10))
+      setSigno ("Libra");
+    if ((dia >= 24 && mes == 10) || (dia <= 22 && mes == 11))
+      setSigno ("Escorpio");
+    if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12))
+      setSigno ("Sagitario");
+    if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1))
+      setSigno ("Capricornio");
+    if ((dia >= 21 && mes == 1) || (dia <= 20 && mes == 2))
+      setSigno ("Acuario");
+    if ((dia >= 21 && mes == 2) || (dia <= 20 && mes == 3))
+      setSigno ("Piscis");
+  }
 
   const nombreDelConsultatnte = function (e){
     setNombre (e.target.value);
@@ -45,10 +77,20 @@ function App() {
   const generoDelConsultante = function (e){
     setGenero (e.target.value);
   }
-
-  const fechaDeNacimientoDelConsultatnte = function (e){
-    setFechaDeNacimiento (e.target.value);
+  
+  const diaDelConsultante = function (e){
+    setDia (e.target.value);
   }
+  
+  const mesDelConsultante = function (e){
+    setMes (e.target.value);
+  }
+  
+  const añoDelConsultante = function (e){
+    setAño (e.target.value);
+  }
+
+
 
 
 
@@ -68,30 +110,44 @@ function App() {
 
       <h3>Genero:</h3>
       <select onChange={generoDelConsultante}>
+        <option>Selcciones un genero</option>
         <option>Hombre</option>
         <option>Mujer</option>
       </select>
 
-      <h3>Fecha de nacimineto:</h3>
-      <input onChange={fechaDeNacimientoDelConsultatnte}type="date" placeholder="tu fecha de nacimiento..."></input>
+      <h3>Introdusca su fecha de nacimiento</h3>
+      <h3>Día:</h3>
+      <input onChange={diaDelConsultante} type="number"  step="1" max="31"></input>
+      
+      <h3>Mes:</h3>
+      <input onChange={mesDelConsultante} type="number"  step="1" max="12"></input>
+      
+      <h3>Año:</h3>
+      <input onChange={añoDelConsultante} type="number"  step="1"></input>
+      
 
       <br></br>
       <br></br>
 
      
-      <button type="button"> Realizar tirada. </button>
+      <button type="button" onClick={calcularSigno}> Realizar tirada. </button>
 
 
-      <h4>{nombre}</h4>
+      {/*<h4>{nombre}</h4>
       <h4>{edad}</h4>
       <h4>{genero}</h4>
-      <h4>{fechaDeNacimiento}</h4>
+      <h4>{dia}</h4>
+      <h4>{mes}</h4>
+      <h4>{año}</h4>*/}
+
                             
 
-      {signos.map(signos => <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
-                            compativilidad={signos.compativilidad} pareja={signos.pareja} numero={signos.numero} nacimiento={signos.nacimiento} caracteristicas={signos.caracteristicas} palabra2022={signos.palabra2022} salud={signos.salud}
-                            dinero={signos.dinero} amor={signos.amor}>
-                            </SignoCorrespondiente>
+      {signos.map((signos) => {
+        if (signos.titulo == signo) return <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
+        compativilidad={signos.compativilidad} pareja={signos.pareja} numero={signos.numero} nacimiento={signos.nacimiento} caracteristicas={signos.caracteristicas} palabra2022={signos.palabra2022} salud={signos.salud}
+        dinero={signos.dinero} amor={signos.amor}>
+        </SignoCorrespondiente>
+      }
       )}
       
    
