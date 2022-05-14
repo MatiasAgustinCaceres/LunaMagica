@@ -8,21 +8,21 @@ function SignoCorrespondiente (props){
   return (
     <div>
       <h1>{props.titulo}</h1>
-      <p>{props.descripcion}</p>
-      <p>{props.elemento}</p>
-      <p>{props.cualidad}</p>
-      <p>{props.color}</p>
-      <p>{props.día}</p>
-      <p>{props.regente}</p>
-      <p>{props.compativilidad}</p>
-      <p>{props.pareja}</p>
-      <p>{props.numero}</p>
-      <p>{props.nacimiento}</p>
-      <p>{props.caracteristicas}</p>
-      <p>{props.palabra2022}</p>
-      <p>{props.salud}</p>
-      <p>{props.dinero}</p>
-      <p>{props.amor}</p>
+      <p>Descripcion: {props.descripcion}</p>
+      <p>Elemento: {props.elemento}</p>
+      <p>Cualidades: {props.cualidad}</p>
+      <p>Corlor: {props.color}</p>
+      <p>Día: {props.día}</p>
+      <p>Regente: {props.regente}</p>
+      <p>Signo mas compatible: {props.compativilidad}</p>
+      <p>Mejor pareja: {props.pareja}</p>
+      <p>Nuemero de la suerte: {props.numero}</p>
+      <p>Rango de nacimiento: {props.nacimiento}</p>
+      <p>Caracteristicas: {props.caracteristicas}</p>
+      <p>Palabra para todo el 2022: {props.palabra2022}</p>
+      <p>Salud: {props.salud}</p>
+      <p>Dinero: {props.dinero}</p>
+      <p>Amor: {props.amor}</p>
     </div>
   )
 }
@@ -38,6 +38,7 @@ function App() {
   const [mes, setMes] = useState();
   const [año, setAño] = useState();
   const [signo, setSigno] = useState();
+
 
   const calcularSigno = function (){
     if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
@@ -131,16 +132,7 @@ function App() {
 
      
       <button type="button" onClick={calcularSigno}> Realizar tirada. </button>
-
-
-      {/*<h4>{nombre}</h4>
-      <h4>{edad}</h4>
-      <h4>{genero}</h4>
-      <h4>{dia}</h4>
-      <h4>{mes}</h4>
-      <h4>{año}</h4>*/}
-
-                            
+                    
 
       {signos.map((signos) => {
         if (signos.titulo == signo) return <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
