@@ -131,7 +131,7 @@ function App() {
       <br></br>
 
      
-      <button type="button" onClick={calcularSigno}> Realizar tirada. </button>
+      <button type="button" onClick={calcularSigno}> Consultar Horoscopo </button>
                     
 
       {signos.map((signos) => {
