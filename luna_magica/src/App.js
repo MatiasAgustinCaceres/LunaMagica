@@ -1,31 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import signosJson from './signos.json';
-
-
-
-function SignoCorrespondiente (props){
-  return (
-    <div>
-      <h1>{props.titulo}</h1>
-      <p>Descripcion: {props.descripcion}</p>
-      <p>Elemento: {props.elemento}</p>
-      <p>Cualidades: {props.cualidad}</p>
-      <p>Corlor: {props.color}</p>
-      <p>Día: {props.día}</p>
-      <p>Regente: {props.regente}</p>
-      <p>Signo mas compatible: {props.compativilidad}</p>
-      <p>Mejor pareja: {props.pareja}</p>
-      <p>Nuemero de la suerte: {props.numero}</p>
-      <p>Rango de nacimiento: {props.nacimiento}</p>
-      <p>Caracteristicas: {props.caracteristicas}</p>
-      <p>Palabra para todo el 2022: {props.palabra2022}</p>
-      <p>Salud: {props.salud}</p>
-      <p>Dinero: {props.dinero}</p>
-      <p>Amor: {props.amor}</p>
-    </div>
-  )
-}
+import SignoCorrespondiente from './Horoscopo';
 
 function App() {
 
@@ -92,9 +68,6 @@ function App() {
   }
 
 
-
-
-
   return (
     <div className="App">
       <h1>Luna Magica</h1>
@@ -134,6 +107,7 @@ function App() {
       <button type="button" onClick={calcularSigno}> Consultar Horoscopo </button>
                     
 
+      
       {signos.map((signos) => {
         if (signos.titulo == signo) return <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
         compativilidad={signos.compativilidad} pareja={signos.pareja} numero={signos.numero} nacimiento={signos.nacimiento} caracteristicas={signos.caracteristicas} palabra2022={signos.palabra2022} salud={signos.salud}
@@ -142,9 +116,6 @@ function App() {
       }
       )}
       
-   
-
-
     </div>
   );
 }
