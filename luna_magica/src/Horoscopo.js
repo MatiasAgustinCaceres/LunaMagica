@@ -13,8 +13,13 @@ export default function SignoCorrespondiente (props){
     }
   
     return (
+
       <div>
+
+        {/*---------------------------------------------- comienzo del contenido que se exporta -----------------------------------------------------  */ }
+
         <div id="exportar">
+
           <h1>{props.titulo}</h1>
           <p>Descripcion: {props.descripcion}</p>
           <p>Elemento: {props.elemento}</p>
@@ -31,7 +36,11 @@ export default function SignoCorrespondiente (props){
           <p>Salud: {props.salud}</p>
           <p>Dinero: {props.dinero}</p>
           <p>Amor: {props.amor}</p>
+        
         </div>
+
+        {/*---------------------------------------------- Fin del contenido que se exporta -----------------------------------------------------  */ }
+
         <button onClick={archivoExportado} type = "button"> Descargar horoscopo </button>
   
       </div>

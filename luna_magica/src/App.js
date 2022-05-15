@@ -7,6 +7,8 @@ function App() {
 
   let signos = signosJson;
 
+  {/*---------------------------------------------- Defino los useState a utilizar ------------------------------------------  */ }
+
   const [nombre, setNombre] = useState();
   const [edad, setEdad] = useState();
   const [genero, setGenero] = useState();
@@ -15,6 +17,7 @@ function App() {
   const [año, setAño] = useState();
   const [signo, setSigno] = useState();
 
+  {/*---------------------------------------------- Funciones de los eventos -----------------------------------------------------  */ }
 
   const calcularSigno = function (){
     if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
@@ -67,9 +70,12 @@ function App() {
     setAño (e.target.value);
   }
 
+  {/*---------------------------------------------- Contenido principal de la app -----------------------------------------------------  */ }
 
   return (
+
     <div className="App">
+
       <h1>Luna Magica</h1>
       <h2>Tirada de cartas online</h2>
       <h2>Por favor, completa el siguiente formulario.</h2>
@@ -77,24 +83,25 @@ function App() {
       <h3>Nombre:</h3>
       <input onChange={nombreDelConsultatnte}type="text" placeholder="tu nombre completo..."></input>
 
-
       <h3>Edad:</h3>
       <input onChange={edadDelConsultatnte}type="number" placeholder="tu edad..." step="1"></input>
       
-
       <h3>Genero:</h3>
       <select onChange={generoDelConsultante}>
+
         <option>Selcciones un genero</option>
         <option>Hombre</option>
         <option>Mujer</option>
+        <option>No binario</option>
+
       </select>
 
-      <h3>Introdusca su fecha de nacimiento</h3>
+      <h3>Introdusca su fecha de nacimiento:</h3>
       <h3>Día:</h3>
-      <input onChange={diaDelConsultante} type="number"  step="1" max="31"></input>
+      <input onChange={diaDelConsultante} type="number"  step="1" max="31" min= "1"></input>
       
       <h3>Mes:</h3>
-      <input onChange={mesDelConsultante} type="number"  step="1" max="12"></input>
+      <input onChange={mesDelConsultante} type="number"  step="1" max="12" min= "1"></input>
       
       <h3>Año:</h3>
       <input onChange={añoDelConsultante} type="number"  step="1"></input>
