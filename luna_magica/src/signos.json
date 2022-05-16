@@ -12,7 +12,7 @@
         "numero": "1",
         "nacimiento": "21 Marzo - 20 Abril",
         "caracteristicas": "Fuerza interior, energía espontánea, confianza en sí mismo",
-        "palabra2022": "Hola? Susana?",
+        "palabra2022": "¿Hola? ¿Susana?",
         "salud": "El abdominal que haces cuando te levantas no cuenta como ejercicio.",
         "dinero": "Bien, siempre y cuando no vivas en argentina.",
         "amor": "Esta es una semana para pedir deliveri. El repartidor o repartidora te puede sorprender."
@@ -30,7 +30,7 @@
         "numero": "2",
         "nacimiento": "21 de Abril - 21 MAyo",
         "caracteristicas": "Fuerte y testarudo, pero práctico y decidido",
-        "palabra2022": "Aguante el Pito loco!",
+        "palabra2022": "¡Aguante el Pito loco!",
         "salud": "Todo tranca, cuídate con la sal nomás.",
         "dinero": "Bien, siempre y cuando no vivas en argentina.",
         "amor": "No serás un hobbit, pero se te viene el anillo."
@@ -49,7 +49,7 @@
         "nacimiento": "22 de Mayo - 21 de Junio",
         "caracteristicas": "Carácter comunicativo y educado con sentido del humor y creatividad",
         "palabra2022": "Cómo te ven te tratan.",
-        "salud": "Hay que bajarle a los postres ",
+        "salud": "Hay que bajarle a los postres",
         "dinero": "Bien, siempre y cuando no vivas en argentina.",
         "amor": "Reencuentro con recuerdos del pasado."
     },
@@ -67,9 +67,9 @@
         "nacimiento": "22 de Junio - 22 de Julio",
         "caracteristicas": "Carácter emotivo pero receptivo, malhumorado y reservado",
         "palabra2022": "Raaaro...",
-        "salud": "La birra entre semana está de más....",
+        "salud": "La birra entre semana está de más...",
         "dinero": "Bien, siempre y cuando no vivas en argentina.",
-        "amor": "Y dale! Total ya estás en la friendzone "
+        "amor": "¡Y dale! Total ya estás en la friendzone."
     },
     {
         "titulo" : "Leo",
@@ -84,7 +84,7 @@
         "numero": "7",
         "nacimiento": "22 de Julio - 22 de Agosto",
         "caracteristicas": "Valiente, seguro de sí mismo, asertivo y abierto es Leo",
-        "palabra2022": "No sé inmunda más!",
+        "palabra2022": "¡No sé inmunda más!",
         "salud": "Hoy tomaste la pastilla ?",
         "dinero": "Bien, siempre y cuando no vivas en argentina.",
         "amor": "El que no arriesga no gana"
@@ -108,7 +108,7 @@
         "amor": "Proba por tus alrededores, te podrías sorprender."
     },
     {
-        "titulo" : "Libra",
+        "titulo": "Libra",
         "descripcion": "A la gente nacida en este signo la gobierna el planeta Venus, por eso es basada muy emocionalmente. También suelen ser intelectuales con gran anhelo denuevas vivencias. Saben alegrarse de la vida y se entusiasman por todo bonito. Muestran capacidades artísticas y aman el arte por él mismo. También les gustan las joyas, el divertimiento, la música, el baile y también el dinero, porque gracias al dinero pueden ganar todo lo que quieren. Entre sus propiedades típicas pertenecen también la sinceridad, la honra y el sentido de la justicia. La mayoría de ellos es simpática, quiere a la gente, es buena y agradables. Tienen sus ideales y tratan de vivir siguiéndolos. Pertenecen entre la gente ambiciosa y un poco egoísta, así que nada les puede ofender. Entre sus puntos débiles pertenece su hiper-sensibilidad, inclinación a la impaciencia y su actitud despreocupada puede llevarles hasta el tratamientoirresponsable con el dinero. Muchas veces prefieren dirigirse según sus sentimientos en el lugar de la razón.",
         "elemento": "Aire",
         "cualidad": "Inteligentes, comunicativos y adaptables.",

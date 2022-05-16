@@ -76,36 +76,39 @@ function App() {
 
     <div className="App">
 
-      <h1>Luna Magica</h1>
-      <h2>Tirada de cartas online</h2>
-      <h2>Por favor, completa el siguiente formulario.</h2>
-      
-      <h3>Nombre:</h3>
+      <h1>Luna Mágica</h1>
+      <h2>¡Consulta tu horoscopo online!</h2>
+      <h3>Por favor, completa el siguiente formulario:</h3>
+
+      <div className='contenedor1'>
+      <h4>Nombre:</h4>
       <input onChange={nombreDelConsultatnte}type="text" placeholder="tu nombre completo..."></input>
 
-      <h3>Edad:</h3>
+      <h4>Edad:</h4>
       <input onChange={edadDelConsultatnte}type="number" placeholder="tu edad..." step="1"></input>
       
-      <h3>Genero:</h3>
+      <h4>Genero:</h4>
       <select onChange={generoDelConsultante}>
 
-        <option>Selcciones un genero</option>
+        <option>Selcciona un genero</option>
         <option>Hombre</option>
         <option>Mujer</option>
         <option>No binario</option>
 
       </select>
+      </div>
 
       <h3>Introdusca su fecha de nacimiento:</h3>
-      <h3>Día:</h3>
+      <div className='contenedor1'>
+      <h4>Día:</h4>
       <input onChange={diaDelConsultante} type="number"  step="1" max="31" min= "1"></input>
       
-      <h3>Mes:</h3>
+      <h4>Mes:</h4>
       <input onChange={mesDelConsultante} type="number"  step="1" max="12" min= "1"></input>
       
-      <h3>Año:</h3>
+      <h4>Año:</h4>
       <input onChange={añoDelConsultante} type="number"  step="1"></input>
-      
+      </div>
 
       <br></br>
       <br></br>
