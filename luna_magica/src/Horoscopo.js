@@ -1,48 +1,70 @@
 import html2canvas from 'html2canvas';
+import React, {useState} from "react";
+import cartas from './Cartas.json';
+import TiradaCartas from './TiradaCartas';
 
 export default function SignoCorrespondiente (props){
 
-    const archivoExportado = function (e){
-      html2canvas(document.querySelector("#exportar")).then(canvas => {
-        let img = canvas.toDataURL ("img/png");
-        let link = document.createElement ('a');
-        link.download = 'horoscopo.png';
-        link.href = img;
-        link.click();
-    });
-    }
-  
-    return (
+  const [id, setId] = useState();
 
-      <div>
-
-        {/*---------------------------------------------- comienzo del contenido que se exporta -----------------------------------------------------  */ }
-
-        <div id="exportar">
-
-          <h1>{props.titulo}</h1>
-          <p>Descripcion: {props.descripcion}</p>
-          <p>Elemento: {props.elemento}</p>
-          <p>Cualidades: {props.cualidad}</p>
-          <p>Corlor: {props.color}</p>
-          <p>Día: {props.día}</p>
-          <p>Regente: {props.regente}</p>
-          <p>Signo mas compatible: {props.compativilidad}</p>
-          <p>Mejor pareja: {props.pareja}</p>
-          <p>Nuemero de la suerte: {props.numero}</p>
-          <p>Rango de nacimiento: {props.nacimiento}</p>
-          <p>Caracteristicas: {props.caracteristicas}</p>
-          <p>Palabra para todo el 2022: {props.palabra2022}</p>
-          <p>Salud: {props.salud}</p>
-          <p>Dinero: {props.dinero}</p>
-          <p>Amor: {props.amor}</p>
-        
-        </div>
-
-        {/*---------------------------------------------- Fin del contenido que se exporta -----------------------------------------------------  */ }
-
-        <button onClick={archivoExportado} type = "button"> Descargar horoscopo </button>
-  
-      </div>
-    )
+  const calcularId = function (){
+    if (props.dia >= 1 && props.dia <= 8)
+      setId ("");
+    if (props.dia >= 9 && props.dia <= 16)
+      setId ("");
+    if (props.dia >= 17 && props.dia <= 24)
+      setId ("");
+    if (props.dia >= 24 && props.dia <= 31)
+      setId ("");
   }
+
+  const archivoExportado = function (e){
+    html2canvas(document.querySelector("#exportar")).then(canvas => {
+      let img = canvas.toDataURL ("img/png");
+      let link = document.createElement ('a');
+      link.download = 'horoscopo.png';
+      link.href = img;
+      link.click();
+  });
+  }
+  
+  return (
+
+    <div>
+
+      {/*---------------------------------------------- comienzo del contenido que se exporta -----------------------------------------------------  */ }
+
+      <div id="exportar">
+
+      <h1>{props.titulo}</h1>
+      <p>Descripcion: {props.descripcion}</p>
+      <p>Elemento: {props.elemento}</p>
+      <p>Cualidades: {props.cualidad}</p>
+      <p>Corlor: {props.color}</p>
+      <p>Día: {props.día}</p>
+      <p>Regente: {props.regente}</p>
+      <p>Signo mas compatible: {props.compativilidad}</p>
+      <p>Mejor pareja: {props.pareja}</p>
+      <p>Nuemero de la suerte: {props.numero}</p>
+      <p>Rango de nacimiento: {props.nacimiento}</p>
+      <p>Caracteristicas: {props.caracteristicas}</p>
+      <p>Palabra para todo el 2022: {props.palabra2022}</p>
+      <p>Salud: {props.salud}</p>
+      <p>Dinero: {props.dinero}</p>
+      <p>Amor: {props.amor}</p>
+        
+      {cartas.map((cartas) => {
+        if (id == cartas.id ) return <TiradaCartas > </TiradaCartas>
+      }
+      )}
+
+      </div>
+
+       {/*---------------------------------------------- Fin del contenido que se exporta -----------------------------------------------------  */ }
+
+      <button type="button" onChange={calcularId}> Tirar cartas </button>
+      <button onClick={archivoExportado} type = "button"> Descargar horoscopo </button>
+  
+    </div>
+  )
+}

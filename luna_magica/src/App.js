@@ -119,9 +119,9 @@ function App() {
 
       
       {signos.map((signos) => {
-        if (signos.titulo == signo) return <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
+        if ((signos.titulo == signo) && (signos.genero == genero)) return <SignoCorrespondiente titulo={signos.titulo} descripcion={signos.descripcion} elemento={signos.elemento} cualidad={signos.cualidad} color={signos.color} día={signos.día} regente={signos.regente}
         compativilidad={signos.compativilidad} pareja={signos.pareja} numero={signos.numero} nacimiento={signos.nacimiento} caracteristicas={signos.caracteristicas} palabra2022={signos.palabra2022} salud={signos.salud}
-        dinero={signos.dinero} amor={signos.amor}>
+        dinero={signos.dinero} amor={signos.amor} dia={dia}>
         </SignoCorrespondiente>
       }
       )}
