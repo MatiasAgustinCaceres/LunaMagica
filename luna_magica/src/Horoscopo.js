@@ -1,21 +1,23 @@
 import html2canvas from 'html2canvas';
 import React, {useState} from "react";
-import cartas from './Cartas.json';
+import cartasJson from './cartas.json';
 import TiradaCartas from './TiradaCartas';
 
 export default function SignoCorrespondiente (props){
+
+  let cartas = cartasJson;
 
   const [id, setId] = useState();
 
   const calcularId = function (){
     if (props.dia >= 1 && props.dia <= 8)
-      setId ("");
+      setId ("Reversa");
     if (props.dia >= 9 && props.dia <= 16)
-      setId ("");
+      setId ("+Cuatro");
     if (props.dia >= 17 && props.dia <= 24)
-      setId ("");
+      setId ("Bloqueo");
     if (props.dia >= 24 && props.dia <= 31)
-      setId ("");
+      setId ("Colores");
   }
 
   const archivoExportado = function (e){
@@ -54,7 +56,7 @@ export default function SignoCorrespondiente (props){
       <p>Amor: {props.amor}</p>
         
       {cartas.map((cartas) => {
-        if (id == cartas.id ) return <TiradaCartas > </TiradaCartas>
+        if (cartas.id === id) return <TiradaCartas titulo={cartas.id} futuro={cartas.futuro} presente={cartas.presente} pasado={cartas.pasado}> </TiradaCartas>
       }
       )}
 
@@ -62,7 +64,7 @@ export default function SignoCorrespondiente (props){
 
        {/*---------------------------------------------- Fin del contenido que se exporta -----------------------------------------------------  */ }
 
-      <button type="button" onChange={calcularId}> Tirar cartas </button>
+      <button type="button" onClick={calcularId}> Tirar cartas </button>
       <button onClick={archivoExportado} type = "button"> Descargar horoscopo </button>
   
     </div>
