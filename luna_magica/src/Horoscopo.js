@@ -24,10 +24,6 @@ export default function SignoCorrespondiente (props){
       setId ("Colores");
   }
 
-  
-
-
-  
   const archivoExportado = function (e){
     html2canvas(document.querySelector("#exportar")).then(canvas => {
       let img = canvas.toDataURL ("img/png");
@@ -71,7 +67,7 @@ export default function SignoCorrespondiente (props){
 
       </div>
 
-      <button type="button" onClick={setTimeout (calcularId , 7000)}> Tirar cartas </button>
+      <button type="button" onClick={calcularId}> Tirar cartas </button>
       <button onClick={archivoExportado} type = "button"> Descargar horoscopo </button>
   
     </div>
