@@ -1,28 +1,28 @@
 [
     {
         "id": "Reversa",
-        "img": "",
+        "img": "carta1",
         "futuro":"Incierto.",
         "presente":"Es momento de dar vuelta las cosas.",
         "pasado":"Tu vida iba en una direccion que era insostenible."
     },
     {
         "id": "+Cuatro",
-        "img": "",
+        "img": "carta2",
         "futuro":"Se vienen momnetos de acumular cosas en tu vida.",
         "presente":"Toca elegir entre cuatro posibles caminos",
         "pasado":"Puede que alguien te haya intentado hacer una maldad pero supiste defenderte."
     },
     {
         "id": "Bloqueo",
-        "img": "",
+        "img": "carta3",
         "futuro":"",
         "presente":"Es momento de poner un alto a cierta gente en tu vida.",
         "pasado":"Irelevante"
     },
     {
         "id": "Colores",
-        "img": "",
+        "img": "carta4",
         "futuro":"Tu vida empezará a tomar un color diferente.",
         "presente":"Toca elegir entre cuatro posibles caminos.",
         "pasado":"No importa como venian las cosas."

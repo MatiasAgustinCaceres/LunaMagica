@@ -39,7 +39,8 @@ export default function SignoCorrespondiente (props){
       <div id="exportar">
 
       <h1>{props.titulo}</h1>
-      <p>Descripcion: {props.descripcion}</p>
+      <img src={`/imgs/${props.img}.jpg`} />
+      <p>Descripción: {props.descripcion}</p>
       <p>Elemento: {props.elemento}</p>
       <p>Cualidades: {props.cualidad}</p>
       <p>Corlor: {props.color}</p>
@@ -56,7 +57,7 @@ export default function SignoCorrespondiente (props){
       <p>Amor: {props.amor}</p>
         
       {cartas.map((cartas) => {
-        if (cartas.id === id) return <TiradaCartas titulo={cartas.id} futuro={cartas.futuro} presente={cartas.presente} pasado={cartas.pasado}> </TiradaCartas>
+        if (cartas.id === id) return <TiradaCartas titulo={cartas.id} img={cartas.img} futuro={cartas.futuro} presente={cartas.presente} pasado={cartas.pasado}> </TiradaCartas>
       }
       )}
 

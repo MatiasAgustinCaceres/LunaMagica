@@ -18,7 +18,7 @@ body{
   background-color: #C6E1F1;
   border: 2px solid #b5c5d7;
   margin: 20px;
-  text-align: left;
+  /*text-align: left;*/
 }
 
 h1{
@@ -56,4 +56,8 @@ button {
   white-space: nowrap;
   word-wrap: break-word;
   margin-bottom: 50px;
+}
+
+img{
+  width: 200px;
 }
