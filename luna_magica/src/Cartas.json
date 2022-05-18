@@ -10,15 +10,15 @@
         "id": "+Cuatro",
         "img": "carta2",
         "futuro":"Se vienen momnetos de acumular cosas en tu vida.",
-        "presente":"Toca elegir entre cuatro posibles caminos",
+        "presente":"Toca elegir entre cuatro posibles caminos.",
         "pasado":"Puede que alguien te haya intentado hacer una maldad pero supiste defenderte."
     },
     {
         "id": "Bloqueo",
         "img": "carta3",
-        "futuro":"",
+        "futuro":"Es muy posible que la proxima persona que queria acercarse a ti ahora no lo haga.",
         "presente":"Es momento de poner un alto a cierta gente en tu vida.",
-        "pasado":"Irelevante"
+        "pasado":"Irelevante."
     },
     {
         "id": "Colores",

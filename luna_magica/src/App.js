@@ -25,9 +25,9 @@ function App() {
     if ((dia >= 21 && mes == 4) || (dia <= 21 && mes == 5))
       setSigno ("Tauro");
     if ((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6))
-      setSigno ("Geminis");
+      setSigno ("Géminis");
     if ((dia >= 22 && mes == 6) || (dia <= 22 && mes == 7))
-      setSigno ("Cancer");
+      setSigno ("Cáncer");
     if ((dia >= 23 && mes == 7) || (dia <= 22 && mes == 8))
       setSigno ("Leo");
     if ((dia >= 23 && mes == 8) || (dia <= 22 && mes == 9))
@@ -69,6 +69,8 @@ function App() {
   const añoDelConsultante = function (e){
     setAño (e.target.value);
   }
+
+
 
   {/*---------------------------------------------- Contenido principal de la app -----------------------------------------------------  */ }
 

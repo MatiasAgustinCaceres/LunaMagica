@@ -1,4 +1,5 @@
 export default function TiradaCartas (props){
+
     return(
         <div>
 
@@ -10,4 +11,5 @@ export default function TiradaCartas (props){
 
         </div>
     )
+
 }
